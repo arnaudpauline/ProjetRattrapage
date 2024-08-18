@@ -1,4 +1,4 @@
-<h1>Edit Stable</h1>
+<h1>Edit Stable</h1> <!--fenêtre édition des Stables-->
 
 <%= form_with(model: @stable, local: true) do |form| %>
   <% if @stable.errors.any? %>
@@ -14,26 +14,26 @@
   <% end %>
 
   <div>
-    <%= form.label :name %>
+    <%= form.label :name %> <!--nom stable-->
     <%= form.text_field :name %>
   </div>
 
   <div>
     <%= form.fields_for :address do |address_fields| %>
       <div>
-        <%= address_fields.label :line1 %>
+        <%= address_fields.label :line1 %> <!--line 1 d'adresse-->
         <%= address_fields.text_field :line1 %>
       </div>
       <div>
-        <%= address_fields.label :zipcode %>
+        <%= address_fields.label :zipcode %> <!--zipcode d'adresse-->
         <%= address_fields.text_field :zipcode %>
       </div>
       <div>
-        <%= address_fields.label :city %>
+        <%= address_fields.label :city %> <!--city d'adresse-->
         <%= address_fields.text_field :city %>
       </div>
       <div>
-        <%= address_fields.label :country %>
+        <%= address_fields.label :country %> <!--country d'adresse-->
         <%= address_fields.text_field :country %>
       </div>
     <% end %>

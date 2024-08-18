@@ -1,5 +1,7 @@
-<%= turbo_frame_tag "horses" do %>
+<%= turbo_frame_tag "horses" do %> <!--fenetre qui affiche la liste des horses et le formulaire pour un créer un-->
 <h1>Horses</h1>
+
+<%= link_to 'View All Stables', stables_path, data: { turbo: false } %>
 
 <%= turbo_frame_tag "horses_list" do %>
   <div id="horses_list">

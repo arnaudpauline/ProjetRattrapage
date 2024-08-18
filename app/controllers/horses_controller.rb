@@ -1,12 +1,12 @@
 class HorsesController < ApplicationController
     before_action :set_horse, only: %i[edit update destroy]
   
-    def index
+    def index 
       @horses = Horse.all
       @horse = Horse.new
     end
   
-    def new
+    def new 
       @horse = Horse.new
     end
   

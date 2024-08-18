@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
    # Définir la route racine
   root 'horses#index'
-  
-  get "horses/index"
-  get "horses/new"
-  get "horses/edit"
+
   # Ressources pour les stables avec toutes les actions RESTful
   resources :stables
   resources :horses

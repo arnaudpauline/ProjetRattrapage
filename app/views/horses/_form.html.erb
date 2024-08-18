@@ -1,4 +1,4 @@
-<%= turbo_frame_tag 'form' do %>
+<%= turbo_frame_tag 'form' do %><!--formulaire pour un nouvel horse-->
   <%= form_with(model: @horse, local: false) do |form| %>
     <% if @horse.errors.any? %>
       <div id="error_explanation">
