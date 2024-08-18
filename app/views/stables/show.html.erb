@@ -1,0 +1,19 @@
+<h1>Stable Details</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @stable.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @address.line1 %>, <%= @address.city %>, <%= @address.country %>
+</p>
+
+<p>
+  <strong>Number of Horses:</strong>
+  <%= @number_of_horses %>
+</p>
+
+<%= link_to 'Edit', edit_stable_path(@stable) %> |
+<%= link_to 'Back', stables_path %>

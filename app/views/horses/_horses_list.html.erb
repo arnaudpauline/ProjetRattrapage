@@ -1,0 +1,5 @@
+<div id="horses_list">
+  <% @horses.each do |horse| %>
+    <%= render partial: 'horse', locals: { horse: horse } %>
+  <% end %>
+</div>

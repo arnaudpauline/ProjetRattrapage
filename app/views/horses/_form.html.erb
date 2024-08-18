@@ -1,0 +1,38 @@
+<%= turbo_frame_tag 'form' do %>
+  <%= form_with(model: @horse, local: false) do |form| %>
+    <% if @horse.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@horse.errors.count, "error") %> prohibited this horse from being saved:</h2>
+        <ul>
+          <% @horse.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div>
+      <%= form.label :race %>
+      <%= form.text_field :race %>
+    </div>
+
+    <div>
+       <%= form.label :color %>
+       <%= form.select :color, Horse::VALID_COLORS %>
+    </div>
+
+    <div>
+      <%= form.label :stable_id %>
+      <%= form.collection_select :stable_id, Stable.all, :id, :name %>
+    </div>
+
+    <div>
+      <%= form.submit %>
+    </div>
+  <% end %>
+<% end %>

@@ -1,0 +1,16 @@
+<%= turbo_frame_tag "horses" do %>
+<h1>Horses</h1>
+
+<%= turbo_frame_tag "horses_list" do %>
+  <div id="horses_list">
+    <% @horses.each do |horse| %>
+      <%= render partial: 'horse', locals: { horse: horse } %>
+    <% end %>
+  </div>
+<% end %>
+
+<%= turbo_frame_tag "form" do %>
+  <%= render partial: 'form', locals: { horse: @horse } %>
+<% end %>
+
+<% end %>

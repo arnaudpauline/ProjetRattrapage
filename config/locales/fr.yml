@@ -1,0 +1,15 @@
+fr:
+  activerecord:
+    errors:
+      models:
+        stable:
+          attributes:
+            address:
+              invalid: "est invalide"
+        address:
+          attributes:
+            zipcode:
+              invalid: "doit être une suite de 5 chiffres pour la France"
+  errors:
+    messages:
+      invalid: "est invalide"

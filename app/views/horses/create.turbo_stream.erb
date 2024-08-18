@@ -1,0 +1,2 @@
+<%= turbo_stream.append 'horses_list', partial: 'horse', locals: { horse: @horse }
+ turbo_stream.replace 'form', partial: 'form', locals: { horse: Horse.new } %>

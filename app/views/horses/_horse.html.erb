@@ -1,0 +1,9 @@
+<%= turbo_frame_tag dom_id(horse) do %>
+  <div class="horse">
+    <p>Name: <%= horse.name %></p>
+    <p>Race: <%= horse.race %></p>
+    <p>Color: <%= horse.color %></p>
+    <%= link_to 'Edit', edit_horse_path(horse), data: { turbo_frame: 'form' } %>
+    <%= link_to 'Destroy', horse_path(horse), method: :delete, data: { confirm: 'Are you sure?', turbo_frame: '_top' } %>
+  </div>
+<% end %>
